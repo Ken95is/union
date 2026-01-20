@@ -21,8 +21,8 @@ with open('file1.txt', 'r') as file1, open('file2.txt', 'r') as file2:
 
 
 with open('file1.txt') as file1, open('file2.txt') as file2:
-    f1 = [int(line) for line in file1]
-    f2 = [int(line) for line in file2]
+    f1 = [int(l) for l in file1]
+    f2 = [int(l) for l in file2]
 
     f3 = [x for x in f1 for y in f2 if x == y]
 
@@ -36,3 +36,7 @@ with open('file1.txt') as file1, open('file2.txt') as file2:
 # with open("input.txt", "r") as inp, open("output.txt", "w") as out: # Можно открывать файлы в разных режимах
 #     out.write(inp.read())
 
+
+# with open('file1.txt') as file1, open('file2.txt') as file2:
+#     f3 = list(set(map(int, file1)) & set(map(int, file2)))
+#     print(f3)
